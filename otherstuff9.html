@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Marking Copilot</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;family=Google+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --google-blue: #4285F4;
+            --google-red: #EA4335;
+            --google-yellow: #FBBC05;
+            --google-green: #34A853;
+            --background-color: #ffffff;
+            --surface-color: #f8f9fa;
+            --on-surface-color: #202124;
+            --on-surface-variant-color: #5f6368;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--on-surface-color);
+        }
+        .google-sans {
+            font-family: 'Google Sans', sans-serif;
+        }
+        .cta-button {
+            @apply bg-[var(--google-blue)] text-white font-medium py-4 px-6 rounded-md hover:bg-blue-700 transition-colors text-base;
+        }
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background-color: var(--google-blue);
+            width: 0%;
+            z-index: 50;
+            transition: width 0.1s linear;
+        }
+        .header-shadow {
+            @apply shadow-md;
+        }
+    </style>
+</head>
+<body class="antialiased">
+<div id="progress-bar"></div>
+<div class="min-h-screen flex flex-col">
+<header class="bg-white border-b border-gray-200 sticky top-0 z-40 transition-shadow duration-300" id="main-header">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex items-center space-x-3">
+<div class="flex items-center">
+<span class="text-2xl google-sans text-[#5f6368]">
+<span class="text-[var(--google-blue)]">M</span><span class="text-[var(--google-red)]">a</span><span class="text-[var(--google-yellow)]">r</span><span class="text-[var(--google-green)]">k</span><span class="text-[var(--google-blue)]">i</span><span class="text-[var(--google-red)]">n</span>g Copilot
+                            </span>
+</div>
+</div>
+<div class="flex-1 flex items-center justify-start ml-16">
+<nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+<a class="text-[var(--on-surface-variant-color)] hover:text-[var(--google-blue)]" href="#">Features</a>
+<a class="text-[var(--on-surface-variant-color)] hover:text-[var(--google-blue)]" href="#">Integrations</a>
+<a class="text-[var(--on-surface-variant-color)] hover:text-[var(--google-blue)]" href="#">Pricing</a>
+</nav>
+</div>
+<div>
+<button class="cta-button">
+                            Get started
+                        </button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<section class="pt-20 pb-16 sm:pt-28 sm:pb-24">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-5 gap-12 items-center">
+<div class="lg:col-span-3">
+<h1 class="text-4xl sm:text-5xl lg:text-6xl google-sans font-normal tracking-tight text-[var(--on-surface-variant-color)] leading-tight">
+                            Grade smarter, not harder. Focus on what matters.
+                        </h1>
+<p class="mt-6 text-lg text-[var(--on-surface-variant-color)]">
+                            Marking Copilot is an AI-powered assistant that streamlines your grading workflow, giving you more time to provide the insightful feedback that truly helps students grow.
+                        </p>
+<div class="mt-10 mb-6 flex flex-col sm:flex-row items-start gap-4">
+<input class="w-full max-w-sm bg-white border border-gray-300 rounded-md px-4 py-3.5 text-base placeholder-gray-500 focus:ring-[var(--google-blue)] focus:border-[var(--google-blue)] transition-colors" placeholder="your.email@university.edu" type="email"/>
+<button class="w-full sm:w-auto bg-[var(--google-blue)] text-white font-medium py-3.5 px-8 rounded-md text-base hover:bg-blue-800 transition-colors">
+                                Join Waitlist
+                            </button>
+</div>
+<ul class="space-y-3 text-[var(--on-surface-variant-color)]">
+<li class="flex items-start">
+<span class="h-2.5 w-2.5 rounded-full bg-[var(--google-blue)] mt-1.5 mr-4 flex-shrink-0"></span>
+<span>Save time on grading</span>
+</li>
+<li class="flex items-start">
+<span class="h-2.5 w-2.5 rounded-full bg-[var(--google-blue)] mt-1.5 mr-4 flex-shrink-0"></span>
+<span>Provide consistent, high-quality feedback</span>
+</li>
+<li class="flex items-start">
+<span class="h-2.5 w-2.5 rounded-full bg-[var(--google-blue)] mt-1.5 mr-4 flex-shrink-0"></span>
+<span>Integrate with your existing tools</span>
+</li>
+</ul>
+</div>
+<div class="w-full h-full lg:col-span-2">
+<div class="aspect-w-16 aspect-h-9 rounded-lg bg-gray-200 border border-gray-300 flex items-center justify-center shadow-lg h-full min-h-[350px]">
+<div class="text-center p-8">
+<svg class="w-16 h-16 text-gray-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+<p class="mt-4 text-lg font-medium text-gray-500">Product Demo Video</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-[var(--surface-color)] py-20 sm:py-24">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-left mb-12 sm:mb-16 max-w-3xl">
+<h2 class="text-3xl sm:text-4xl google-sans font-normal text-[var(--on-surface-color)]">See Marking Copilot in Action</h2>
+<p class="mt-4 text-lg text-[var(--on-surface-variant-color)]">Discover how our tool transforms your grading process, one feature at a time.</p>
+</div>
+<div class="space-y-16">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="order-2 md:order-1">
+<h3 class="text-2xl google-sans text-[var(--on-surface-color)]">Automated Feedback Generation</h3>
+<p class="mt-4 text-[var(--on-surface-variant-color)]">Simply highlight a section of student work, and Marking Copilot instantly provides relevant, constructive feedback based on your pre-defined criteria. Edit and personalize suggestions with a single click.</p>
+<div class="mt-6 flex space-x-2">
+<div class="w-8 h-1 bg-[var(--google-blue)] rounded-full"></div>
+<div class="w-8 h-1 bg-gray-300 rounded-full"></div>
+<div class="w-8 h-1 bg-gray-300 rounded-full"></div>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<img alt="Screenshot of the Marking Copilot interface showing automated feedback generation." class="rounded-lg shadow-lg border border-gray-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArojw4ZDX-r_dNhcd_nH4SYq1ZxLTXILEbY_ctJascKxsQkmWnwX-7WMfdMPkGd-u6ePYuPoXFo_t22_O1TUM_81V5Z1mf_VhE9ajj5MEH-syk0vCi6ky2Npir61KLeVD2QrIkPvtP1PWVh_JielYTb1x08iyoHXfUHGQDIG9GOoEjCee4tdlPdFmxQ3G3DZPWVG7uoCS2Pbj1WzfGGZj3Q4XT2G2fpMuq23vXMGY0DUPuYkLDK0Pz0NwQReQl940xyYQLkuBVg-Q"/>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="order-1">
+<img alt="Screenshot of the Marking Copilot rubric integration feature." class="rounded-lg shadow-lg border border-gray-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtx0nuGeoCXfL-YS0A4IXs18aNRYJILACjZCVBfKMv2W3STyASoVg7zfFw5cS1ZenzVownwI5wygWFQgdeR2YS1-iTs41k4seWvSt1frKHyVSeHjNJjccsnO1vRdEFVeYSDouXRXrMHMRHBRNv01JMslZ2LypFCqqfh6OC45sNJ-XgTYdRp0NwqzRYypd8vkmnUzVyy5uvnou-N25n0J4MHaqhkm5jmxPvmvl9r5D6T8n3BeRBrKVomcs0RY9fp4O5UOs18BxyFnw"/>
+</div>
+<div class="order-2">
+<h3 class="text-2xl google-sans text-[var(--on-surface-color)]">Seamless Rubric Integration</h3>
+<p class="mt-4 text-[var(--on-surface-variant-color)]">Import your existing rubrics and let the AI assist in applying them consistently across all submissions. The tool highlights evidence for each criterion, making your grading more transparent and fair.</p>
+<div class="mt-6 flex space-x-2">
+<div class="w-8 h-1 bg-gray-300 rounded-full"></div>
+<div class="w-8 h-1 bg-[var(--google-green)] rounded-full"></div>
+<div class="w-8 h-1 bg-gray-300 rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="order-2 md:order-1">
+<h3 class="text-2xl google-sans text-[var(--on-surface-color)]">Insightful Analytics Dashboard</h3>
+<p class="mt-4 text-[var(--on-surface-variant-color)]">Get a bird's-eye view of your class's performance. Identify common mistakes, track progress over time, and pinpoint areas where students might need additional support, all from one intuitive dashboard.</p>
+<div class="mt-6 flex space-x-2">
+<div class="w-8 h-1 bg-gray-300 rounded-full"></div>
+<div class="w-8 h-1 bg-gray-300 rounded-full"></div>
+<div class="w-8 h-1 bg-[var(--google-yellow)] rounded-full"></div>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<img alt="Screenshot of the Marking Copilot analytics dashboard showing class performance." class="rounded-lg shadow-lg border border-gray-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCltx418Ih6wUrEwOip5YNL7eBpIW7azyStuRXnp0tEO_KbZbHVWBr1WjkUblnXv6esEljYVh9KsBxVSVi7pFyBpsTl8v4Tz6aWqaKWX6afDnmnyXF_bDYOYZDehAmjLcA5SY8WHhTOlrPXJNIp-bgubSMgb_BoKvQqmH-Oy7M7_2PNQvHL3_R1apgkLiLpf47e9w1tZXpcazlNOunGPho7GtAR3wPRzeugPo-f8rCMFBqiuIPILzHfhEnbIk4Bqe8rCzbqYQNuww"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 sm:py-24">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12 sm:mb-16">
+<h2 class="text-3xl sm:text-4xl google-sans font-normal text-[var(--on-surface-color)]">Integrates with your workflow</h2>
+<p class="mt-4 text-lg text-[var(--on-surface-variant-color)] max-w-2xl mx-auto">Marking Copilot works with the tools you already use, making adoption seamless for you and your institution.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+<div class="flex justify-center">
+<img alt="Google Classroom logo" class="h-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx8MOPT_eyC5ViB0wEn5mw0SIp0nzWg0klseAJAqi5oDXOdfP_k09YnMFEVeTufCZMnsK8C-Et3cRvdVlT5vwEk_aJaYLWrpgBSPTr1tD7iwQAI-tOZiuih-vkzmliQUwOgwIYE3F_p82pfOu_Qhwk1xOTzmB-zzcjpzA1OCYAmCYSZfToZc6C7EZNYcKxIC6ZKiczXVe-2q-cHvi3hy1Jv0ore8AYpmimEkZ3_FVFSJyIhlDVopQXmf8YYRGYp_dIgjXaaLgtmg4"/>
+</div>
+<div class="flex justify-center">
+<img alt="Canvas logo" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgt5bJ15cI7S-C_tLh2U_v1x5F9A6f-QYy8uK0pLw_KkP0v_Jj9B5gC9A_bX4qO5V5b5R6kX_S7qC5Z_kYqO5J_jI5rP3"/>
+</div>
+<div class="flex justify-center">
+<img alt="Blackboard logo" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIK9h-vQnL1P1b2d7sJ7cK3lX5w_uO5y8d7f8a7eP9s_I8l9j7f6gD_hE9rG_fX4qW_uO6y8b9j_K5d_L4p_N_oP3rQ"/>
+</div>
+<div class="flex justify-center">
+<img alt="Moodle logo" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIK9h-vQnL1P1b2d7sJ7cK3lX5w_uO5y8d7f8a7eP9s_I8l9j7f6gD_hE9rG_fX4qW_uO6y8b9j_K5d_L4p_N_oP3rQ"/>
+</div>
+</div>
+<div class="mt-12 text-center">
+<a class="text-[var(--google-blue)] hover:underline font-medium" href="#">And many more...</a>
+</div>
+</div>
+</section>
+<section class="py-20 sm:py-24">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-3xl sm:text-4xl google-sans font-normal text-[var(--on-surface-color)]">Transform your teaching workflow</h2>
+<p class="mt-4 text-lg text-[var(--on-surface-variant-color)]">Spend less time on repetitive tasks and more time engaging with your students. Marking Copilot is your partner in education.</p>
+<div class="mt-8 flex space-x-2">
+<div class="w-10 h-1 bg-[var(--google-blue)] rounded-full"></div>
+<div class="w-10 h-1 bg-[var(--google-red)] rounded-full"></div>
+<div class="w-10 h-1 bg-[var(--google-yellow)] rounded-full"></div>
+<div class="w-10 h-1 bg-[var(--google-green)] rounded-full"></div>
+</div>
+</div>
+<div class="relative rounded-lg overflow-hidden border border-gray-200">
+<img alt="A diverse group of students collaborating in a modern, bright classroom setting." class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByv9oSNgBx_lU2zdILFCTJTKwUKhLzEiHyUrcaAM1Bc9TqSGMJSoPRX6MfFpdBZhbeB9LPR5XtDEXl_d14eAve8zE6tyWavAUeG9OA75wfGOhaP2owSzPscTtrAWfIqYHsWYaeUTqVVucdj_XLym7I46cZv5yeD3pWSQjywFqPpFT-2XL9tCDEgf5T8fb-UT4QaTwR9jQa_X25A1QK0hnOmHo9tw5ljRn3T2MjpnDwcLfnIUSR0Op79YXWvCTKvZ7TtDY2n2ydBDU" style="max-height: 400px;"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<script>
+        window.onscroll = function() {
+            updateProgressBar();
+            handleHeaderShadow();
+        };
+        function updateProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+        }
+        function handleHeaderShadow() {
+            const header = document.getElementById('main-header');
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                header.classList.add('header-shadow');
+            } else {
+                header.classList.remove('header-shadow');
+            }
+        }
+    </script>
+</body></html>
